@@ -174,8 +174,8 @@ def executor(number, transcript, day_number):
         'your': 'img/you.png',
         
     }
-    os.makedirs(f"./final_videos/{day_number}", exist_ok=True)
-    output_video = f'./final_videos/{day_number}/video_{number:03}.mp4'
+    os.makedirs(f"/content/drive/My Drive/final_videos/{day_number}", exist_ok=True)
+    output_video = f'/content/drive/My Drive/final_videos/{day_number}/video_{number:03}.mp4'
 
     create_animated_subtitles(input_mp4, output_video, keyword_to_image, subtitle_data=subtitle_data, day_number=day_number)
     print("Success, final video has been saved at", output_video)
