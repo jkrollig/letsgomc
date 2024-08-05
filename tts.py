@@ -76,16 +76,16 @@ def trim_media(input_file, duration, output_file):
 
 
 def combine_audio_video(number, day_number):
-    clip_files = [f for f in os.listdir("clippeds/") if f.endswith(".mp4")]
+    clip_files = [f for f in os.listdir("/content/drive/My Drive/clippeds/") if f.endswith(".mp4")]
 
     # Choose a random clip file
     random_clip = choice(clip_files)
 
     # Create the full path to the randomly selected clip
-    # input_video = os.path.join("clippeds/", random_clip)
+    # input_video = os.path.join("/content/drive/My Drive/clippeds/", random_clip)
     
     os.makedirs(f"mp3/{day_number}", exist_ok=True)
-    input_video = os.path.join("clippeds/", random_clip)
+    input_video = os.path.join("/content/drive/My Drive/clippeds/", random_clip)
     input_audio = f"mp3/{day_number}/output_{number:03}.mp3"
 
     # input_video = f"clippeds/clip_{number:03}.mp4"
