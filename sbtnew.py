@@ -97,7 +97,7 @@ def create_animated_subtitles(input_video, output_video, keyword_images, subtitl
 
     video = (
     input_video_ffmpeg.video
-    .filter('subtitles', subtitle_file, force_style=f'Fontname={"fonts/Impact.ttf"},FontSize=36,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,Bold=1,BorderStyle=1,Outline=1,Shadow=0,Alignment=10')
+    .filter('subtitles', subtitle_file, force_style=f'Fontname=Impact,FontSize=36,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,Bold=1,BorderStyle=1,Outline=1,Shadow=0,Alignment=10')
     .drawtext(text=upper_text, fontfile='fonts/bebasneue.ttf', fontsize=60, fontcolor='white', x='(w-text_w)/2', y=f'{margin_top}', shadowcolor='black@0.5', shadowx=2, shadowy=2)
     .drawtext(text=day_text, fontfile='fonts/bebasneue.ttf', fontsize=100, fontcolor='white', x='(w-text_w)/2', y=f'{margin_top}+32+{text_spacing}', shadowcolor='black@0.5', shadowx=2, shadowy=2)
 )
